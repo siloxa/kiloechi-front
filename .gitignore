@@ -1,0 +1,14 @@
+node_modules
+dist
+data
+uploads
+.env
+graphify-out/cache
+.impeccable/review
+.impeccable/mocks
+# impeccable design-skill working files (decision page state, review captures, sketches)
+.impeccable/questions/
+.impeccable/decision/
+.impeccable/config.local.json
+# project skills are installed locally (copied from onlinemenu-front), not versioned
+**/.claude/skills/

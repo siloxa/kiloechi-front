@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-22T06:50:07.886Z",
+  "title": "Design System: Kiloechi — The Counter Ticket",
+  "extensions": {
+    "colorMeta": {
+      "fryer-red": {
+        "role": "primary",
+        "displayName": "Fryer Red",
+        "canonical": "#d40f14",
+        "tonalRamp": [
+          "#3a1213",
+          "#77080b",
+          "#ab0c10",
+          "#e01015",
+          "#f1373c",
+          "#f57073",
+          "#f9a9ab",
+          "#f9ecec"
+        ]
+      },
+      "fryer-red-deep": {
+        "role": "primary",
+        "displayName": "Fryer Red Deep",
+        "canonical": "#9c0b0f",
+        "tonalRamp": [
+          "#3a1213",
+          "#77080b",
+          "#ac0c10",
+          "#e01016",
+          "#f1373c",
+          "#f57074",
+          "#f9a9ab",
+          "#f9ecec"
+        ]
+      },
+      "board-black": {
+        "role": "primary",
+        "displayName": "Board Black",
+        "canonical": "#1a0708",
+        "tonalRamp": [
+          "#33191a",
+          "#641b1f",
+          "#91272d",
+          "#bd333a",
+          "#d2565d",
+          "#df868b",
+          "#ecb7b9",
+          "#f7eeee"
+        ]
+      },
+      "board-black-lit": {
+        "role": "primary",
+        "displayName": "Board Black Lit",
+        "canonical": "#2b0d0f",
+        "tonalRamp": [
+          "#331a1c",
+          "#621e22",
+          "#8d2b31",
+          "#b83840",
+          "#cd5b62",
+          "#db8a8f",
+          "#eab9bc",
+          "#f6eeef"
+        ]
+      },
+      "led-yellow": {
+        "role": "secondary",
+        "displayName": "LED Yellow",
+        "canonical": "#ffc400",
+        "tonalRamp": [
+          "#3d330f",
+          "#806200",
+          "#b88d00",
+          "#f0b800",
+          "#ffcd29",
+          "#ffdc66",
+          "#ffeaa3",
+          "#faf6eb"
+        ]
+      },
+      "led-yellow-soft": {
+        "role": "secondary",
+        "displayName": "LED Yellow Soft",
+        "canonical": "#ffe27a",
+        "tonalRamp": [
+          "#3d330f",
+          "#806400",
+          "#b89000",
+          "#f0bb00",
+          "#ffd029",
+          "#ffde66",
+          "#ffeba3",
+          "#faf7eb"
+        ]
+      },
+      "thermal-paper": {
+        "role": "neutral",
+        "displayName": "Thermal Paper",
+        "canonical": "#fdfdfb",
+        "tonalRamp": [
+          "#2e2e1f",
+          "#55552a",
+          "#7a7a3d",
+          "#a0a050",
+          "#b8b870",
+          "#cccc99",
+          "#e0e0c2",
+          "#f5f5f0"
+        ]
+      },
+      "cool-counter": {
+        "role": "neutral",
+        "displayName": "Cool Counter",
+        "canonical": "#eceeee",
+        "tonalRamp": [
+          "#252828",
+          "#3c4343",
+          "#576161",
+          "#717f7f",
+          "#8e9a9a",
+          "#aeb7b7",
+          "#cfd4d4",
+          "#f2f3f3"
+        ]
+      },
+      "thermal-ink": {
+        "role": "neutral",
+        "displayName": "Thermal Ink",
+        "canonical": "#1a1414",
+        "tonalRamp": [
+          "#292323",
+          "#483737",
+          "#685050",
+          "#876868",
+          "#a28686",
+          "#bca9a9",
+          "#d7cbcb",
+          "#f3f1f1"
+        ]
+      },
+      "ink-faded": {
+        "role": "neutral",
+        "displayName": "Ink Faded",
+        "canonical": "#5b5555",
+        "tonalRamp": [
+          "#272525",
+          "#423e3e",
+          "#5f5959",
+          "#7c7474",
+          "#989090",
+          "#b5b0b0",
+          "#d3d0d0",
+          "#f3f2f2"
+        ]
+      },
+      "perforation": {
+        "role": "neutral",
+        "displayName": "Perforation",
+        "canonical": "#cfcac3",
+        "tonalRamp": [
+          "#292724",
+          "#474139",
+          "#665e52",
+          "#857a6b",
+          "#a09688",
+          "#bbb4aa",
+          "#d6d2cc",
+          "#f3f2f1"
+        ]
+      },
+      "ok-green": {
+        "role": "status",
+        "displayName": "OK Green",
+        "canonical": "#157a3f",
+        "tonalRamp": [
+          "#163624",
+          "#136d38",
+          "#1b9d51",
+          "#23cc6a",
+          "#48e087",
+          "#7ce9a9",
+          "#b1f2cc",
+          "#edf8f1"
+        ]
+      },
+      "error-red": {
+        "role": "status",
+        "displayName": "Error Red",
+        "canonical": "#b00020",
+        "tonalRamp": [
+          "#3d0f18",
+          "#800017",
+          "#b80021",
+          "#f0002c",
+          "#ff2950",
+          "#ff6682",
+          "#ffa3b4",
+          "#faebed"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (Lalezar)",
+        "purpose": "Hero headline only, yellow on fryer red."
+      },
+      "page": {
+        "displayName": "Page title",
+        "purpose": "Page titles on red."
+      },
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Section and slip titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and small slip titles."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero line, totals, dish names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Descriptions and meta."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Stamps, lamp labels, LED captions."
+      },
+      "led-s": {
+        "displayName": "LED small",
+        "purpose": "Steppers, cart count, rail counts (Handjet ELSH 16, ELGR 1)."
+      },
+      "led-m": {
+        "displayName": "LED medium",
+        "purpose": "Board and admin readouts."
+      },
+      "led-l": {
+        "displayName": "LED large",
+        "purpose": "Lamp band."
+      },
+      "led-xl": {
+        "displayName": "LED order number",
+        "purpose": "Your order number on the account board."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-slip",
+        "value": "0 22px 40px -20px rgba(40, 0, 0, 0.55)",
+        "purpose": "Slips, framed photos, your slip."
+      },
+      {
+        "name": "shadow-sm",
+        "value": "0 4px 10px -4px rgba(26, 7, 8, 0.25)",
+        "purpose": "Buttons, admin cards, the printer bar."
+      },
+      {
+        "name": "led-glow",
+        "value": "0 0 14px rgba(255, 196, 0, 0.5)",
+        "purpose": "Text-shadow emission on LED elements only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All state transitions."
+      },
+      {
+        "name": "t-fast",
+        "value": "160ms",
+        "purpose": "Hover, press, colour."
+      },
+      {
+        "name": "t-med",
+        "value": "320ms",
+        "purpose": "Paper feed, slip print, stamp press."
+      },
+      {
+        "name": "lamp-sequence",
+        "value": "0.5s per lamp, 0.45s stagger",
+        "purpose": "Lamp band lighting on scroll."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "640px"
+      },
+      {
+        "name": "admin-drawer",
+        "value": "900px"
+      },
+      {
+        "name": "board-collapse",
+        "value": "1080px"
+      },
+      {
+        "name": "content-max",
+        "value": "1240px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Main call to action on red and on paper.",
+      "html": "<button class=\"ds-btn ds-btn-ink\">ثبت سفارش</button>",
+      "css": ":host{--red:#d40f14;--red-deep:#9c0b0f;--board:#1a0708;--board-2:#2b0d0f;--yellow:#ffc400;--yellow-soft:#ffe27a;--paper:#fdfdfb;--ink:#1a1414;--ink-soft:#5b5555;--perf:#cfcac3;--led-glow:rgba(255,196,0,.5);font-family:Vazirmatn,system-ui,sans-serif;direction:rtl}.ds-btn{min-height:44px;padding:.5rem 1.3rem;border-radius:8px;border:2px solid transparent;font-weight:800;font-family:inherit;cursor:pointer;transition:transform .16s cubic-bezier(.16,1,.3,1),background .16s}.ds-btn:hover{transform:translateY(-1px)}.ds-btn:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}.ds-btn-ink{background:var(--board);color:var(--yellow)}.ds-btn-ink:hover{background:var(--board-2)}"
+    },
+    {
+      "name": "Red Button",
+      "kind": "button",
+      "refersTo": "button-red",
+      "description": "Primary action on paper.",
+      "html": "<button class=\"ds-btn ds-btn-red\">ادامه و ثبت سفارش</button>",
+      "css": ":host{--red:#d40f14;--red-deep:#9c0b0f;--board:#1a0708;--board-2:#2b0d0f;--yellow:#ffc400;--yellow-soft:#ffe27a;--paper:#fdfdfb;--ink:#1a1414;--ink-soft:#5b5555;--perf:#cfcac3;--led-glow:rgba(255,196,0,.5);font-family:Vazirmatn,system-ui,sans-serif;direction:rtl}.ds-btn{min-height:44px;padding:.5rem 1.3rem;border-radius:8px;border:2px solid transparent;font-weight:800;font-family:inherit;cursor:pointer;transition:transform .16s cubic-bezier(.16,1,.3,1),background .16s}.ds-btn:hover{transform:translateY(-1px)}.ds-btn:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}.ds-btn-red{background:var(--red);color:var(--paper)}.ds-btn-red:hover{background:var(--red-deep)}"
+    },
+    {
+      "name": "Yellow Button",
+      "kind": "button",
+      "refersTo": "button-yellow",
+      "description": "Secondary action on red.",
+      "html": "<button class=\"ds-btn ds-btn-yellow\">همهٔ تخفیف‌ها</button>",
+      "css": ":host{--red:#d40f14;--red-deep:#9c0b0f;--board:#1a0708;--board-2:#2b0d0f;--yellow:#ffc400;--yellow-soft:#ffe27a;--paper:#fdfdfb;--ink:#1a1414;--ink-soft:#5b5555;--perf:#cfcac3;--led-glow:rgba(255,196,0,.5);font-family:Vazirmatn,system-ui,sans-serif;direction:rtl}.ds-btn{min-height:44px;padding:.5rem 1.3rem;border-radius:8px;border:2px solid transparent;font-weight:800;font-family:inherit;cursor:pointer;transition:transform .16s cubic-bezier(.16,1,.3,1),background .16s}.ds-btn:hover{transform:translateY(-1px)}.ds-btn:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}.ds-btn-yellow{background:var(--yellow);color:var(--board)}"
+    },
+    {
+      "name": "Board Readout",
+      "kind": "custom",
+      "refersTo": "board-readout",
+      "description": "LED readout on the call board; shows true data only.",
+      "html": "<div class=\"ds-board\"><span class=\"ds-led\">۴</span><span class=\"ds-word\">در راه<small>شمارهٔ سفارش شما</small></span></div>",
+      "css": ":host{--red:#d40f14;--red-deep:#9c0b0f;--board:#1a0708;--board-2:#2b0d0f;--yellow:#ffc400;--yellow-soft:#ffe27a;--paper:#fdfdfb;--ink:#1a1414;--ink-soft:#5b5555;--perf:#cfcac3;--led-glow:rgba(255,196,0,.5);font-family:Vazirmatn,system-ui,sans-serif;direction:rtl}.ds-board{display:inline-flex;align-items:center;gap:.8rem;padding:.3rem 1rem;background:#000;border-radius:8px;box-shadow:inset 0 0 0 1px rgba(255,196,0,.2)}.ds-led{font-family:Handjet,monospace;font-weight:800;font-variation-settings:\"ELSH\" 16,\"ELGR\" 1;font-size:2.4rem;color:var(--yellow);text-shadow:0 0 14px var(--led-glow);line-height:1}.ds-word{font-weight:800;color:var(--yellow);font-size:.875rem;white-space:nowrap}.ds-word small{display:block;color:var(--yellow-soft);font-weight:500;font-size:.8rem}"
+    },
+    {
+      "name": "Slip Row",
+      "kind": "card",
+      "refersTo": "slip",
+      "description": "The one row every dish uses: photo, name, price with stamp, add control.",
+      "html": "<div class=\"ds-slip\"><div class=\"ds-row\"><span class=\"ds-img\"></span><div><strong>فیلهٔ سوخاری</strong><p>فیلهٔ مرغ سوخاری با سس تند و شیرین.</p></div><div class=\"ds-end\"><span class=\"ds-stamp\">۱۰٪ تخفیف</span><b>۳۴۲٬۰۰۰ تومان</b><s>۳۸۰٬۰۰۰ تومان</s><button class=\"ds-add\" aria-label=\"افزودن\">+</button></div></div></div>",
+      "css": ":host{--red:#d40f14;--red-deep:#9c0b0f;--board:#1a0708;--board-2:#2b0d0f;--yellow:#ffc400;--yellow-soft:#ffe27a;--paper:#fdfdfb;--ink:#1a1414;--ink-soft:#5b5555;--perf:#cfcac3;--led-glow:rgba(255,196,0,.5);font-family:Vazirmatn,system-ui,sans-serif;direction:rtl}.ds-slip{background:var(--paper);color:var(--ink);padding:1rem 1.2rem;border-radius:4px 4px 0 0}.ds-row{display:grid;grid-template-columns:64px 1fr auto;gap:.9rem;align-items:center}.ds-img{width:64px;height:64px;border-radius:8px;background:#eceeee}.ds-row p{margin:.1rem 0 0;color:var(--ink-soft);font-size:.875rem}.ds-end{display:grid;justify-items:end;gap:.2rem}.ds-end s{font-size:.8rem;color:var(--ink-soft);text-decoration-color:var(--red)}.ds-stamp{border:2px solid var(--red);color:var(--red);border-radius:4px;padding:0 .4rem;font-weight:900;font-size:.8rem;transform:rotate(-6deg)}.ds-add{width:44px;height:44px;border-radius:50%;border:0;background:var(--red);color:var(--paper);font-size:1.4rem;cursor:pointer}.ds-add:hover{background:var(--red-deep)}.ds-add:focus-visible{outline:3px solid var(--red-deep);outline-offset:2px}"
+    },
+    {
+      "name": "LED Stepper",
+      "kind": "input",
+      "refersTo": "stepper",
+      "description": "Quantity control once a dish is on your slip.",
+      "html": "<span class=\"ds-step\"><button aria-label=\"یکی بیشتر\">+</button><span>۲</span><button aria-label=\"یکی کمتر\">−</button></span>",
+      "css": ":host{--red:#d40f14;--red-deep:#9c0b0f;--board:#1a0708;--board-2:#2b0d0f;--yellow:#ffc400;--yellow-soft:#ffe27a;--paper:#fdfdfb;--ink:#1a1414;--ink-soft:#5b5555;--perf:#cfcac3;--led-glow:rgba(255,196,0,.5);font-family:Vazirmatn,system-ui,sans-serif;direction:rtl}.ds-step{display:inline-flex;align-items:center;border-radius:999px;background:var(--board);padding:2px}.ds-step button{width:40px;height:40px;border-radius:50%;border:0;background:none;color:var(--yellow);font-size:1.2rem;cursor:pointer}.ds-step button:hover{background:rgba(255,255,255,.1)}.ds-step button:focus-visible{outline:3px solid var(--yellow)}.ds-step span{min-width:1.6em;text-align:center;font-family:Handjet,monospace;font-weight:800;font-variation-settings:\"ELSH\" 16,\"ELGR\" 1;font-size:1.6rem;color:var(--yellow)}"
+    },
+    {
+      "name": "Status Lamps",
+      "kind": "custom",
+      "refersTo": "board-readout",
+      "description": "Five labeled lamps; lit means yellow with glow; the current lamp pulses.",
+      "html": "<ol class=\"ds-lamps\"><li class=\"on\">در انتظار تأیید</li><li class=\"on\">تأیید شد</li><li class=\"on now\">در حال آماده‌سازی</li><li>در راه</li><li>تحویل شد</li></ol>",
+      "css": ":host{--red:#d40f14;--red-deep:#9c0b0f;--board:#1a0708;--board-2:#2b0d0f;--yellow:#ffc400;--yellow-soft:#ffe27a;--paper:#fdfdfb;--ink:#1a1414;--ink-soft:#5b5555;--perf:#cfcac3;--led-glow:rgba(255,196,0,.5);font-family:Vazirmatn,system-ui,sans-serif;direction:rtl}.ds-lamps{list-style:none;margin:0;padding:1rem;display:grid;grid-template-columns:repeat(5,1fr);gap:.4rem;background:var(--board)}.ds-lamps li{display:grid;justify-items:center;gap:.4rem;text-align:center;font-size:.8rem;color:rgba(253,253,251,.6)}.ds-lamps li::before{content:\"\";width:22px;height:22px;border-radius:50%;background:var(--board-2)}.ds-lamps li.on{color:var(--paper)}.ds-lamps li.on::before{background:var(--yellow);box-shadow:0 0 14px var(--led-glow)}.ds-lamps li.now{color:var(--yellow);font-weight:800}"
+    },
+    {
+      "name": "Menu Tab",
+      "kind": "chip",
+      "refersTo": "tab-selected",
+      "description": "Category tab; the selected one becomes paper with a perforated red edge.",
+      "html": "<div class=\"ds-tabs\"><button class=\"ds-tab on\">همه</button><button class=\"ds-tab\">مرغ سوخاری</button></div>",
+      "css": ":host{--red:#d40f14;--red-deep:#9c0b0f;--board:#1a0708;--board-2:#2b0d0f;--yellow:#ffc400;--yellow-soft:#ffe27a;--paper:#fdfdfb;--ink:#1a1414;--ink-soft:#5b5555;--perf:#cfcac3;--led-glow:rgba(255,196,0,.5);font-family:Vazirmatn,system-ui,sans-serif;direction:rtl}.ds-tabs{display:flex;gap:.5rem;background:var(--red);padding:.6rem}.ds-tab{min-height:44px;padding:.3rem 1.1rem;border-radius:4px;border:0;background:var(--red-deep);color:var(--paper);font-weight:800;cursor:pointer;font-family:inherit}.ds-tab:hover{background:var(--board-2)}.ds-tab:focus-visible{outline:3px solid var(--yellow)}.ds-tab.on{background:var(--paper) radial-gradient(circle at 50% 100%,var(--red) 3px,transparent 3.5px) bottom/10px 6px repeat-x;color:var(--ink)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Counter Ticket (فیش و شماره)",
+    "overview": "Ordering at Kiloechi works like ordering at an Iranian fast-food counter. You take a slip, your number lights up on the red-and-black call board, and it is called hot. The site refuses the delivery-app default of a split photo hero over a row of equal product cards. Its parts are the counter's own: a near-black call board with yellow LED readouts across the top of every page, thermal slips with torn edges that hold the menu, red rubber stamps that land when something changes, and status lamps that light one by one.\n\nPublic pages (home, menu) persuade on a saturated fryer-red field. Working screens (cart, checkout, account, admin) keep the same materials but quieter, with paper on red for customers and a cool counter grey for staff. Everything shown on the board is true: the visitor's own order number and status, or today's real count of discounted dishes, never invented numbers.",
+    "keyCharacteristics": [
+      "The board is the horizon of every page: sticky, edge to edge, a dot grille behind yellow dot-matrix numerals.",
+      "One slip row is the ruler for every dish on every page (photo, name, description, price, add control).",
+      "Red stamps appear only on state change: discounted, added, delivered, cancelled.",
+      "The added dish lifts forward and prints a new line onto \"your slip\".",
+      "Persian right-to-left throughout, Persian digits, Toman prices, Solar Hijri dates."
+    ],
+    "rules": [
+      {
+        "name": "The Yellow-on-Red Rule",
+        "body": "Yellow sits on red only at display size (the hero headline). Every other yellow text sits on board black.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cream Ban Rule",
+        "body": "Paper is thermal white `#fdfdfb` and the admin ground is cool `#eceeee`. Warm cream grounds are out.",
+        "section": "colors"
+      },
+      {
+        "name": "The One LED Face Rule",
+        "body": "Numbers that are live data (counts, order numbers, quantities) are Handjet dot-matrix. Prices are Vazirmatn with tabular figures, because they are printed, not lit.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do show only true data on the board and in the footer; hide what the owner hasn't provided.",
+      "Do keep every dish in the same slip row, on every page.",
+      "Do mark discounts on the price itself: struck old price plus a red stamp.",
+      "Do keep tap targets at least 44px and focus rings visible (yellow on dark and red, deep red on paper).",
+      "Do respect `prefers-reduced-motion`: no lift, press or feed movement; fades only."
+    ],
+    "donts": [
+      "Don't use emoji or Unicode glyphs as icons; use the 2px-stroke SVG set in `components/Icons.jsx`.",
+      "Don't invent testimonials, branches, ratings, order numbers or prices.",
+      "Don't put yellow text on red below display size.",
+      "Don't use warm cream grounds, gradient text, glass effects, or thick one-side accent borders.",
+      "Don't add a generic numbered \"how it works\" strip; the status lamps tell that story."
+    ]
+  }
+}
