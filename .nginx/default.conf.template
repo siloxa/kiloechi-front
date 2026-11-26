@@ -1,0 +1,104 @@
+# Nginx in front of the built frontend.
+#
+# It serves the single-page app and proxies the API and the uploaded pictures to the
+# backend on the shared Docker network, so the browser only ever talks to this one origin.
+# That is what keeps the API same-origin for the browser (client/src/lib/api.js calls plain
+# relative /api/... paths) and takes CORS out of the picture entirely.
+#
+# BACKEND_HOST and BACKEND_PORT are substituted from the environment when the container
+# starts. The image only substitutes names that exist in the container's environment, so
+# nginx's own $host, $request_uri and friends are left untouched.
+
+server {
+    listen 3000;
+    server_name _;
+
+    root /usr/share/nginx/html;
+    index index.html;
+    etag on;
+
+    # The backend accepts images up to 5 MB and re-checks the real size itself.
+    client_max_body_size 6M;
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_proxied any;
+    gzip_types text/plain text/css text/xml application/javascript application/json image/svg+xml application/manifest+json;
+
+    # Docker's embedded DNS, consulted per request rather than once at start-up: the site
+    # still comes up when the backend is not running yet, and picks it up as soon as it is.
+    resolver 127.0.0.11 valid=10s ipv6=off;
+    set $kiloechi_backend "${BACKEND_HOST}:${BACKEND_PORT}";
+
+    location /api/ {
+        proxy_pass http://$kiloechi_backend$request_uri;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
+        # Uploads are the slowest call the client makes; it gives up after 60s itself.
+        proxy_connect_timeout 10s;
+        proxy_send_timeout 70s;
+        proxy_read_timeout 70s;
+        # A backend that is still starting should read as a gateway error, not as a page.
+        proxy_intercept_errors off;
+    }
+
+    # Pictures the admin uploaded, which the backend serves while no CDN is configured.
+    location /uploads/ {
+        proxy_pass http://$kiloechi_backend$request_uri;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_valid 200 1h;
+    }
+
+    # The security headers are repeated in each static location on purpose: nginx replaces
+    # the whole inherited add_header set as soon as a location adds one of its own, so
+    # declaring them once at server level would silently drop them exactly where a
+    # Cache-Control is set. Proxied responses carry the backend's own headers instead.
+
+    # Hashed assets never change under the same name.
+    location /assets/ {
+        try_files $uri =404;
+        add_header Cache-Control "public, max-age=31536000, immutable" always;
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    }
+
+    # The entry document must not be cached, or a deploy would keep serving the old bundle.
+    location = /index.html {
+        add_header Cache-Control "no-store, must-revalidate" always;
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+        add_header X-Frame-Options "DENY" always;
+    }
+
+    location = /robots.txt {
+        try_files $uri =404;
+    }
+
+    location = /healthz {
+        access_log off;
+        add_header Content-Type text/plain;
+        return 200 "ok\n";
+    }
+
+    # Every other path belongs to the client-side router.
+    location / {
+        try_files $uri $uri/ /index.html;
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+        add_header X-Frame-Options "DENY" always;
+    }
+
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+        root /usr/share/nginx/html;
+        internal;
+    }
+}

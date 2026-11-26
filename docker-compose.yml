@@ -1,0 +1,33 @@
+# The frontend container. It joins the backend's network so that nginx can reach the API
+# under a single public origin; the backend stack (kiloechi-back/src/main/docker/app.yml)
+# owns and creates that network, so the backend has to be released at least once before
+# this.
+#
+# One stack per environment: KILOECHI_PREFIX carries through every name that has to be
+# unique on the host, so production and staging can run side by side. Left alone, it is
+# production.
+name: ${KILOECHI_FRONT_PROJECT:-kiloechi-front}
+
+services:
+  kiloechi-front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${KILOECHI_FRONT_IMAGE:-kiloechi-front:latest}
+    container_name: ${KILOECHI_PREFIX:-kiloechi}-front
+    environment:
+      # Where nginx forwards /api and /uploads, resolved on the shared network.
+      - BACKEND_HOST=${BACKEND_HOST:-kiloechi-app}
+      - BACKEND_PORT=${BACKEND_PORT:-8080}
+    # Published on the loopback interface only: a reverse proxy on the host terminates TLS
+    # and forwards to this port. Set KILOECHI_FRONT_BIND=0.0.0.0 to expose it directly.
+    ports:
+      - '${KILOECHI_FRONT_BIND:-127.0.0.1}:${KILOECHI_FRONT_PORT:-50182}:3000'
+    networks:
+      - kiloechi-network
+    restart: unless-stopped
+
+networks:
+  kiloechi-network:
+    name: ${KILOECHI_PREFIX:-kiloechi}-network
+    external: true

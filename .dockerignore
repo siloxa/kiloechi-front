@@ -1,0 +1,21 @@
+node_modules
+dist
+data
+uploads
+npm-debug.log*
+.dockerignore
+Dockerfile
+docker-compose.yml
+release.sh
+**/.git
+**/.DS_Store
+**/node_modules
+.env
+.env.*
+!.env.example
+docs
+graphify-out
+.impeccable
+screenshots
+# server/ is the local-dev mock API (Express + node:sqlite); the image only builds client/.
+server
